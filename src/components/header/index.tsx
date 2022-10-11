@@ -18,7 +18,7 @@ export function Header() {
          p={{
             base: '4',
             md: '4',
-            lg: '6'
+            lg: '5'
          }}
          gap={{
             base: '5',
@@ -28,7 +28,7 @@ export function Header() {
          justify={{
             base: 'space-between',
             md: 'space-between',
-            lg: 'space-around'
+            lg: 'space-between'
          }}
          bg="gray.800"
          color="whiteAlpha.900"
@@ -37,7 +37,7 @@ export function Header() {
          <Flex
             flexDirection={{base: 'column', md: 'column', lg: 'row'}}
             gap={{base: '2', md: '2', lg: '8'}}
-            align={['start', 'start', 'center']}
+            align={['start', 'center', 'center']}
             justify={['start', 'start', 'center']}
 
          >
