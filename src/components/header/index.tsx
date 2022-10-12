@@ -32,6 +32,7 @@ export function Header() {
          }}
          bg="gray.800"
          color="whiteAlpha.900"
+         mb="2.5rem"
       >
          {/* <Image /> FAZER UMA LOGO */}
          <Flex
