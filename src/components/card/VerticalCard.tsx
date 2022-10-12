@@ -1,7 +1,8 @@
 import { Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { customScrollbar } from "../../styles/styles";
 
 // Conteúdo que o componente vai receber
-interface VerticalCardProps {
+interface HorizontalCardProps {
    card: {
       image: {
          url: string;
@@ -13,16 +14,16 @@ interface VerticalCardProps {
    }
 }
 
-export function VerticalCard({ card }: VerticalCardProps) {
+export function HorizontalCard({ card }: HorizontalCardProps) {
    const { image, title, content, publishDate } = card;
    return (
       <Flex
-         maxW="850px" maxH="400px" borderRadius="8px" bgColor="gray.100"
+         maxW="850px" maxH="400px" borderRadius="8px" bgColor="gray.800" color="whiteAlpha.900"
       >
          <Image 
             src={image.url} alt={image.alt} 
-            maxW="400px"
-            maxH="400px"
+            maxW={["200px", "300px", "400px"]}
+            maxH={["200px", "300px", "400px"]}
             objectFit="cover"
             borderLeftRadius="8px"
          />
@@ -32,13 +33,15 @@ export function VerticalCard({ card }: VerticalCardProps) {
             align="flex-start"
             maxW="350px"
             minW="200px"
-            h="400px"
+            h={["200px", "300px", "400px"]}
          >
             <Text
-               
+               variant="subtitle"
             >{publishDate}</Text>
             <Heading size="lg">{title}</Heading>
-            <Text overflow="auto">{content}</Text>
+            <Text overflow="auto"
+               css={customScrollbar}
+            >{content}</Text>
          </VStack>
       </Flex>
    )
