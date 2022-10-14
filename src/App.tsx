@@ -1,12 +1,24 @@
 import { Center, VStack } from "@chakra-ui/react"
-import { HorizontalCard } from "./components/card/VerticalCard"
+import { HorizontalCard } from "./components/AllCards/Vcard/VerticalCard"
 import { Header } from "./components/header"
 
 import { horizontal_cards } from "./components/components-mock.json"
 import { cards } from "./components/card-component-mock.json";
-import { Card } from "./components/card/Card"
+import { Card } from "./components/AllCards/card/Card"
+
+import "swiper/css";
+import { Slider, SliderProps, Slide } from "./components/Slider/";
 
 function App() {
+
+  const swiperNavigation: SliderProps = {
+    spaceBetween: 50,
+    slidesPerView: 3,
+    navigation: true,
+    pagination: {
+      clickable: true,
+    }
+  }
 
   return (
     <div>
@@ -23,6 +35,21 @@ function App() {
           ))}
         </VStack>
       </Center>
+
+      <Slider settings={swiperNavigation}>
+        <Slide>
+          teste 1
+        </Slide>
+        <Slide>
+          Teste 2
+        </Slide>
+        <Slide>
+          Teste 3
+        </Slide>
+        <Slide>
+          Teste 4
+        </Slide>
+      </Slider>
     </div>
   )
 }

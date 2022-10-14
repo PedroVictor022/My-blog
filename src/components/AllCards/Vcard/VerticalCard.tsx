@@ -1,5 +1,5 @@
 import { Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
-import { customScrollbar } from "../../styles/styles";
+import { customScrollbar } from "../../../styles/styles";
 
 // Conteúdo que o componente vai receber
 interface HorizontalCardProps {
