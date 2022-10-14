@@ -1,8 +1,5 @@
-import { Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import { useState } from "react";
-import theme from "../../styles/theme";
-import { BtnLink } from "../Links";
-
+import { memo, useState } from "react";
+import { Button, Flex, Heading, Text } from "@chakra-ui/react";
 export function Header() {
    const [isOpen, setIsOpen] = useState(false);
 
@@ -85,3 +82,5 @@ export function Header() {
       </Flex>
    )
 }
+
+export default memo(Header);
